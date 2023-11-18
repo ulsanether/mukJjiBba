@@ -45,7 +45,7 @@ void task1(void *pvParameters){
 while(1){
 
   Serial.println("출력");
- // tft.drawCircle(64, 90, 10, ST77XX_BLACK );
+ // tft.drawCircle(64, 90, 10, ST7735_BLACK );
 
 
   //voice.say(spDINER);
@@ -132,13 +132,13 @@ digitalWrite(wavGnd, LOW);
 
   tft.initR(INITR_BLACKTAB);
   uint16_t time = millis();
-  tft.fillScreen(ST77XX_BLACK);
+  tft.fillScreen(ST7735_BLACK);
   time = millis() - time;
   Serial.println(time, DEC);
   delay(500);
 
   // large block of text
-  tft.fillScreen(ST77XX_BLACK);
+  tft.fillScreen(ST7735_BLACK);
 
   randomSeed(analogRead(0));
 
@@ -183,13 +183,13 @@ void loop() {
 
 
 void gui_basic() { //게임 시작
-  tft.drawCircle(64, 90, 10, ST77XX_GREEN );
+  tft.drawCircle(64, 90, 10, ST7735_GREEN );
   delay(10);
-  tft.drawCircle(64, 90, 10, ST77XX_BLACK );
+  tft.drawCircle(64, 90, 10, ST7735_BLACK );
   delay(10);
-  tft.drawRect(64, 90, 10, 10, ST77XX_RED );
+  tft.drawRect(64, 90, 10, 10, ST7735_RED );
   delay(10);
-  tft.drawRect(64, 90, 10, 10, ST77XX_BLACK);
+  tft.drawRect(64, 90, 10, 10, ST7735_BLACK);
   delay(10);
 
 }
@@ -205,7 +205,7 @@ for(row =0; row<h; row ++){
   }
 }
 
-  //tft.drawCircle(64, 90, 30, ST77XX_WHITE );
+  //tft.drawCircle(64, 90, 30, ST7735_WHITE );
 
 
 
@@ -215,11 +215,11 @@ for(row =0; row<h; row ++){
 void win() {
 while(1){
   for (int i = 0; i < 10; i++) {
-    tft.fillCircle ( 115, 35, 10, ST77XX_BLACK) ; //아래 동그라미
-    tft.fillCircle ( 10, 35, 10, ST77XX_WHITE) ; //아래 왼쪽 동그라미
+    tft.fillCircle ( 115, 35, 10, ST7735_BLACK) ; //아래 동그라미
+    tft.fillCircle ( 10, 35, 10, ST7735_WHITE) ; //아래 왼쪽 동그라미
     delay(100);
-    tft.fillCircle ( 10, 35, 10, ST77XX_BLACK) ; //아래 왼쪽 동그라미
-    tft.fillCircle ( 115, 35, 10, ST77XX_WHITE) ; //아래 동그라미
+    tft.fillCircle ( 10, 35, 10, ST7735_BLACK) ; //아래 왼쪽 동그라미
+    tft.fillCircle ( 115, 35, 10, ST7735_WHITE) ; //아래 동그라미
     delay(100);
 
   }
@@ -227,48 +227,48 @@ while(1){
 }
 
 void test() {
-  //tft.fillCircle ( 10,145, 10, ST77XX_BLACK ) ; //아래 왼쪽 동그라미
-  //tft.fillCircle ( 10,35, 10, ST77XX_WHITE ) ; //아래 동그라미
-  //tft.fillCircle ( 115,145, 10, ST77XX_WHITE ) ; //아래 오른쪽 동그라미
-  //tft.fillCircle ( 115,35, 10, ST77XX_WHITE ) ; //아래 동그라미
+  //tft.fillCircle ( 10,145, 10, ST7735_BLACK ) ; //아래 왼쪽 동그라미
+  //tft.fillCircle ( 10,35, 10, ST7735_WHITE ) ; //아래 동그라미
+  //tft.fillCircle ( 115,145, 10, ST7735_WHITE ) ; //아래 오른쪽 동그라미
+  //tft.fillCircle ( 115,35, 10, ST7735_WHITE ) ; //아래 동그라미
 
   int i = 0;
   while (i < 20) {
-    tft.fillCircle(41, 52, 5, ST77XX_BLACK); //11
-    tft.fillCircle(64, 45, 5, ST77XX_WHITE ); //12시
+    tft.fillCircle(41, 52, 5, ST7735_BLACK); //11
+    tft.fillCircle(64, 45, 5, ST7735_WHITE ); //12시
     delay(100);
-    tft.fillCircle(64, 45, 5, ST77XX_BLACK ); //12시
-    tft.fillCircle(87, 52, 5, ST77XX_WHITE); //1
+    tft.fillCircle(64, 45, 5, ST7735_BLACK ); //12시
+    tft.fillCircle(87, 52, 5, ST7735_WHITE); //1
     delay(100);
-    tft.fillCircle(87, 52, 5, ST77XX_BLACK); //1
-    tft.fillCircle(103, 68, 5, ST77XX_WHITE); //2
+    tft.fillCircle(87, 52, 5, ST7735_BLACK); //1
+    tft.fillCircle(103, 68, 5, ST7735_WHITE); //2
     delay(100);
-    tft.fillCircle(103, 68, 5, ST77XX_BLACK); //2
-    tft.fillCircle(108, 90, 5, ST77XX_WHITE); //3
+    tft.fillCircle(103, 68, 5, ST7735_BLACK); //2
+    tft.fillCircle(108, 90, 5, ST7735_WHITE); //3
     delay(100);
-    tft.fillCircle(108, 90, 5, ST77XX_BLACK); //3
-    tft.fillCircle(103, 113, 5, ST77XX_WHITE); //4
+    tft.fillCircle(108, 90, 5, ST7735_BLACK); //3
+    tft.fillCircle(103, 113, 5, ST7735_WHITE); //4
     delay(100);
-    tft.fillCircle(103, 113, 5, ST77XX_BLACK); //4
-    tft.fillCircle(87, 129, 5, ST77XX_WHITE); //5
+    tft.fillCircle(103, 113, 5, ST7735_BLACK); //4
+    tft.fillCircle(87, 129, 5, ST7735_WHITE); //5
     delay(100);
-    tft.fillCircle(87, 129, 5, ST77XX_BLACK); //5
-    tft.fillCircle(64, 135, 5, ST77XX_WHITE); //6
+    tft.fillCircle(87, 129, 5, ST7735_BLACK); //5
+    tft.fillCircle(64, 135, 5, ST7735_WHITE); //6
     delay(100);
-    tft.fillCircle(64, 135, 5, ST77XX_BLACK); //6
-    tft.fillCircle(41, 129, 5, ST77XX_WHITE); //7
+    tft.fillCircle(64, 135, 5, ST7735_BLACK); //6
+    tft.fillCircle(41, 129, 5, ST7735_WHITE); //7
     delay(100);
-    tft.fillCircle(41, 129, 5, ST77XX_BLACK); //7
-    tft.fillCircle(26, 113, 5, ST77XX_WHITE); //8
+    tft.fillCircle(41, 129, 5, ST7735_BLACK); //7
+    tft.fillCircle(26, 113, 5, ST7735_WHITE); //8
     delay(100);
-    tft.fillCircle(26, 113, 5, ST77XX_BLACK); //8
-    tft.fillCircle(18, 90, 5, ST77XX_WHITE); //9
+    tft.fillCircle(26, 113, 5, ST7735_BLACK); //8
+    tft.fillCircle(18, 90, 5, ST7735_WHITE); //9
     delay(100);
-    tft.fillCircle(18, 90, 5, ST77XX_BLACK); //9
-    tft.fillCircle(26, 68, 5, ST77XX_WHITE); //10
+    tft.fillCircle(18, 90, 5, ST7735_BLACK); //9
+    tft.fillCircle(26, 68, 5, ST7735_WHITE); //10
     delay(100);
-    tft.fillCircle(26, 68, 5, ST77XX_BLACK); //10
-    tft.fillCircle(41, 52, 5, ST77XX_WHITE); //11
+    tft.fillCircle(26, 68, 5, ST7735_BLACK); //10
+    tft.fillCircle(41, 52, 5, ST7735_WHITE); //11
     delay(100);
     i++;
   }
